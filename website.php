@@ -16,11 +16,14 @@ table, th, td {
 include 'connectdb.php';
 ?>
 
-<h2>List Bustrips </h2>
+<h1>List of Bustrips</h1>
+<?php
+include 'listbustrips.php';
+?>
+
+<h2>View ordered list of Bustrips</h2>
 <form action="getbustrips.php" method="post">
-	<p>Order by: </p>
-	<input type = "radio" id = "unordered" name="order" value="Unordered">
-	<label for="unordered">Unordered</label><br>	
+	<p>Order by: </p>	
 	<input type = "radio" id = "tripname" name="order" value="tripname">
 	<label for="tripname">Trip Name</label><br>
 	<input type = "radio" id = "country" name="order" value="country">

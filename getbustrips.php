@@ -14,9 +14,6 @@ include 'connectdb.php';
 <?php
 $order = $_POST["order"];
 $sort = $_POST["sort"];
-if ($order == "Unordered"){
-	$query = "SELECT * FROM bustrip";
-}
 if ($order =="tripname"){
 	if($sort == "ASC"){
 		 $query = "SELECT * FROM bustrip ORDER BY tripname ASC";
