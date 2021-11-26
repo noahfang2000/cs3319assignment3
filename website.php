@@ -15,14 +15,31 @@ table, th, td {
 <?php
 include 'connectdb.php';
 ?>
-<h1>These are all the bustrips </h1>
 
-<!-- List Bustrips -->
-<form action="/getbustrips.php">
-	<p>List Bustrips</p>
-	<input
-<?php
-include 'getbustrips.php';
-?>
+<h2>List Bustrips </h2>
+<form action="getbustrips.php" method="post">
+	<p>Order by: </p>
+	<input type = "radio" id = "unordered" name="order" value="Unordered">
+	<label for="unordered">Unordered</label><br>	
+	<input type = "radio" id = "tripname" name="order" value="tripname">
+	<label for="tripname">Trip Name</label><br>
+	<input type = "radio" id = "country" name="order" value="country">
+	<label for="country">Country</label><br>
+	
+	<p>Sort by: </p>
+	<input type = "radio" id = "ascending" name="sort" value="ASC">
+	<label for="ascending">Ascending</label><br>
+	
+	<input type = "radio" id = "descending" name="sort" value="DESC">
+	<label for="descending">Descending</label><br>
+	
+	<input type="submit" value="Submit">
+</form>
+
+    
+
+
+
+
 </body>
 </html>
