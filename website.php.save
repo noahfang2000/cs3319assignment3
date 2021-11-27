@@ -15,8 +15,8 @@ table, th, td {
 <?php
 include 'connectdb.php';
 ?>
-<h1>Welcome to the TERROR DOME</h1>
-<h2>List of Bustrips</h2>
+
+<h1>List of Bustrips</h1>
 <?php
 include 'listbustrips.php';
 ?>
@@ -39,26 +39,7 @@ include 'listbustrips.php';
 	<input type="submit" value="Submit">
 </form>
 
-<h2>Edit the Bustrip Database</h2>
-<form action = "editbustrip.php" method="post">
-	Trip id of the trip you would like to edit:(Required)<br>
-	<input text="text" name ="tripid" required><br>
-	
-	<p>What would you like to edit:(Please Fill Only one in at a time)</P>
-	Trip Name:<br>
-	<input type="text" name="edittripname" id="edittripname"><br>
-
-	Start Date:<br>
-	<input type="date" id="editstartdate" name="editstartdate"><br>
-	End Date:<br>
-	<input type="date" id ="editenddate" name="editenddate"><br>
-
-	Trip Image:<br>
-	<input type ="text" name"editimage" id="editimage"><br>
-	<br>
-	<input type="submit" value="Submit">
-</form>
-    
+<h2>Edit The Bustrip    
 
 
 
