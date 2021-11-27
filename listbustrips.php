@@ -8,9 +8,19 @@ if (!$result) {
 }
 echo "<table><tr><th>TripId</th><th>TripName</th><th>Startdate</th><th>Enddate</th><th>Country</th><th>Assignedbus</th><th>Url Image</th></tr>";
 while ($row = mysqli_fetch_assoc($result)) {  
-   echo "<tr><td>". $row["tripid"] ."</td><td>" . $row["tripname"] ."</td><td>" .$row["startdate"]."</td><td>" 
-.$row["enddate"]."</td><td>".$row["country"]."</td><td>" .$row["assignedbus"]."</td><td>" .$row["urlImage"]. "</td></tr>";
+?>
+	<tr>
+	<td> <?php echo $row["tripid"]   ?> </td>
+	<td> <?php echo $row["tripname"] ?></td>
+	<td> <?php echo $row["startdate"]?></td>
+	<td> <?php echo $row["enddate"]  ?></td>
+	<td> <?php echo $row["country"]  ?></td>
+	<td> <?php echo $row["assignedbus"]?></td>
+	<td> <img src= "<?php echo $row["urlImage"];?>"/ height="60" width="60"> </td>
+	</tr>";
+<?php
 }
+
 echo"</table>";
 mysqli_free_result($result);
 ?>

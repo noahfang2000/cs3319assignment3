@@ -39,6 +39,25 @@ include 'listbustrips.php';
 	<input type="submit" value="Submit">
 </form>
 
+<h2>Edit the Bustrip Database</h2>
+<form>
+	Trip id of the trip you would like to edit:(Required)<br>
+	<input text="text" name ="tripid" required><br>
+	
+	<p>What would you like to edit:(Please Fill Only one in at a time)</P>
+	Trip Name:<br>
+	<input type="text" name="edittripname" id="edittripname"><br>
+
+	Start Date:<br>
+	<input type="date" id="editstartdate" name="editstartdate"><br>
+	End Date:<br>
+	<input type="date" id ="editenddate" name="editenddate"><br>
+
+	Trip Image:<br>
+	<input type ="file" name"editimage" id="editimage"><br>
+	<br>
+	<input type="submit" value="Submit">
+</form>
     
 
 
