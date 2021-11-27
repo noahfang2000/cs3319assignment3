@@ -100,6 +100,17 @@ Is there a trip picture:<input type="text" name="newurlimage"><br>
 <input type="submit" value="Submit">
 </form> 
 
+<br>
+<h2>Select Country and View Bustrips</h2>
+<form action="viewcountries.php" form="post">
+<select name="viewcountry">
+<option value="1">Select Here</option>
+<?php
+include "viewcountrybustrips.php";
+?>
+</select><br>
+<input type="submit" value="Submit">
+</form>
 
 
 </body>
