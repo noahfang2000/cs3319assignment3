@@ -83,11 +83,12 @@ if (isset($_POST['deletebustrip'])) {
 ?> 
 
 <h2>Add a new Bustrip</h2>
-<form>
+<form action="addbustrip.php" form="post"> 
 What is the tripid:<input type="number" name = "newtripid"><br>
 What is the tripname:<input type = "text" name="newtripname"><br>
 What is the start date:<input type ="date" name="newstartdate"><br>
 What is the end date: <input type ="date" name ="newenddate"><br>
+Which country is this trip going to:<input type ="text" name="newcountry"><br>
 Which bus is the trip taking:
 	<select name="newbus">
 	<option value="1">Select Here</option>
