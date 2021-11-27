@@ -58,8 +58,46 @@ include 'listbustrips.php';
 	<br>
 	<input type="submit" value="Submit">
 </form>
-    
 
+
+<h2>Delete a Bustrip</h2>
+<form action="" method="post">
+	<select name="deletebustrip" id="deletebustrip">
+ 	
+	<option value="1">Select Here</option>
+	<?php
+ 	include "optionbustrip.php";
+	?>
+	
+	</select>
+	<br>
+	<input type="submit" value="Submit">
+</form>
+<hr>
+
+<?php
+if (isset($_POST['deletebustrip'])) {
+ include "connectdb.php";
+ include "deletebustrip.php";
+}
+?> 
+
+<h2>Add a new Bustrip</h2>
+<form>
+What is the tripid:<input type="number" name = "newtripid"><br>
+What is the tripname:<input type = "text" name="newtripname"><br>
+What is the start date:<input type ="date" name="newstartdate"><br>
+What is the end date: <input type ="date" name ="newenddate"><br>
+Which bus is the trip taking:
+	<select name="newbus">
+	<option value="1">Select Here</option>
+	<?php
+	include "optionassignedbus.php";
+	?>
+	</select><br>
+Is there a trip picture:<input type="text" name="newurlimage"><br>
+<input type="submit" value="Submit">
+</form> 
 
 
 
